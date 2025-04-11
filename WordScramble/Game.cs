@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 using Spectre.Console;
 
 namespace WordScramble
@@ -24,7 +25,9 @@ namespace WordScramble
         /// </summary>
         public Game()
         {
-            // ////////// => TO IMPLEMENT <= //////////// //
+            wordProvider.GetScrambledWord(wordProvider.GetRandomWord());
+            Array.Clear(gameStats);
+
         }
 
         /// <summary>
@@ -79,12 +82,12 @@ namespace WordScramble
             /// <summary>
             /// The randomly chosen word for the current round.
             /// </summary>
-            string word = // ////////// => TO IMPLEMENT <= //////////// //
+            string word = wordProvider.GetRandomWord();
 
             /// <summary>
             /// The scrambled version of the word.
             /// </summary>
-            string scrambledWord = // ////////// => TO IMPLEMENT <= //////////// //
+            string scrambledWord = wordProvider.GetScrambledWord(word);
 
             AnsiConsole.Clear();
             AnsiConsole.MarkupLine("[bold green]Unscramble the word:[/]");
@@ -105,7 +108,7 @@ namespace WordScramble
             /// <summary>
             /// Checks if the player's guess is correct.
             /// </summary>
-            bool isCorrect = // ////////// => TO IMPLEMENT <= //////////// //
+            bool isCorrect = userInput == word;
 
             if (isCorrect)
             {
@@ -120,7 +123,7 @@ namespace WordScramble
                 }
 
                 // Add new result at the beginning
-                gameStats[0] = // ////////// => TO IMPLEMENT <= //////////// //
+                gameStats[0] = 1;
             }
             else
             {
@@ -161,7 +164,10 @@ namespace WordScramble
                 
                 // Add row to table
                 // Table.AddRow() only accepts strings
-                // ////////// => TO IMPLEMENT <= //////////// //
+                if (gameStats[i] != null)
+                {
+                    table.AddRow($"Game number {i}");
+                }
             }
 
             AnsiConsole.Write(table);
