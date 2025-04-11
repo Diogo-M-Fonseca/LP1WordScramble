@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using Humanizer.Localisation.DateToOrdinalWords;
 using Spectre.Console;
 
 namespace WordScramble
@@ -166,7 +167,7 @@ namespace WordScramble
                 // Table.AddRow() only accepts strings
                 if (gameStats[i] != null)
                 {
-                    table.AddRow($"Game number {i}");
+                    table.AddRow($"word:{wordProvider.GetRandomWord()}, Time: {Time}");
                 }
             }
 
