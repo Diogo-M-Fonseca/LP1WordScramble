@@ -25,10 +25,11 @@ namespace WordScramble
         /// </remarks>
         public WordProvider()
         {
-            random = // ////////// => TO IMPLEMENT <= //////////// //
+            random = new Random();
+            int index = random.Next(0, 15);
 
             string directoryPath = Path.GetFullPath(
-                Path.Combine(
+                Path.Combine( 
                     AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
             string filePath = Path.Combine(directoryPath, "words.txt");
 
