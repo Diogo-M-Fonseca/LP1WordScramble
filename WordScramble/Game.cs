@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Text.RegularExpressions;
 using Humanizer.Localisation.DateToOrdinalWords;
 using Spectre.Console;
@@ -160,14 +161,14 @@ namespace WordScramble
             {
                 if (gameStats[i] == null)
                 {
-                    // ////////// => TO IMPLEMENT <= //////////// //
+                    table.AddEmptyRow();
                 }
                 
                 // Add row to table
                 // Table.AddRow() only accepts strings
                 if (gameStats[i] != null)
                 {
-                    table.AddRow($"word:{wordProvider.GetRandomWord()}, Time: {Time}");
+                    table.AddRow($"word:{wordProvider.GetRandomWord()}");
                 }
             }
 
