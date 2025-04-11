@@ -65,6 +65,8 @@ namespace WordScramble
         public string GetRandomWord()
         {
             string word = words;
+            return word;
+
         }
 
         /// <summary>

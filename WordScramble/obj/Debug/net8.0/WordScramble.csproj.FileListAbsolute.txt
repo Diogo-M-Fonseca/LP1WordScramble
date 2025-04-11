@@ -1,0 +1,6 @@
+C:\Users\diogo\Desktop\LP1\LP1WordScramble\WordScramble\obj\Debug\net8.0\WordScramble.csproj.AssemblyReference.cache
+C:\Users\diogo\Desktop\LP1\LP1WordScramble\WordScramble\obj\Debug\net8.0\WordScramble.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diogo\Desktop\LP1\LP1WordScramble\WordScramble\obj\Debug\net8.0\WordScramble.AssemblyInfoInputs.cache
+C:\Users\diogo\Desktop\LP1\LP1WordScramble\WordScramble\obj\Debug\net8.0\WordScramble.AssemblyInfo.cs
+C:\Users\diogo\Desktop\LP1\LP1WordScramble\WordScramble\obj\Debug\net8.0\WordScramble.csproj.CoreCompileInputs.cache
+C:\Users\diogo\Desktop\LP1\LP1WordScramble\WordScramble\obj\Debug\net8.0\WordScramble.sourcelink.json
