@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks.Dataflow;
 using Humanizer;
 
 namespace WordScramble
@@ -39,7 +40,7 @@ namespace WordScramble
                 string[] fileWords = File.ReadAllLines(filePath);
                 foreach (string word in fileWords)
                 {
-                    string transformedWord = 
+                    string transformedWord = word.Transform(To.UpperCase);
                     words.Add(transformedWord);
                 }
             }
@@ -63,7 +64,7 @@ namespace WordScramble
         /// </remarks>
         public string GetRandomWord()
         {
-            // ////////// => TO IMPLEMENT <= //////////// //
+            
         }
 
         /// <summary>
