@@ -88,8 +88,8 @@ namespace WordScramble
                 int j = random.Next(i, scrambled.Length);
 
                 char temp = scrambled[j];
-                scrambled[i] = 
-                scrambled[j] = 
+                scrambled[i] = scrambled[j];
+                scrambled[j] = scrambled[j];
             }
             return new string(scrambled);
         }
